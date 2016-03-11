@@ -19,7 +19,10 @@ statement
 	;
 
 var_decl
-	: 'variable' ID ';' { decVars.put( $ID.getText(), null); }
+	: 'variable' ID ';' 
+		{ 
+			decVars.put( $ID.getText(), null); 
+		}
 	;
 
 var_assign
@@ -30,22 +33,11 @@ var_assign
 	;
 
 repeat_show
-	: 'repeat' iterations 'show' var ';'
+	: 'repeat' iterations=var 'show' x=var ';'
 		{ 
 			for(int i = 0; i < $iterations.number; i++)
-				System.out.print($var.number + " ");
+				System.out.print($x.number + " ");
 			System.out.println();
-		}
-	;
-
-iterations returns [int number]
-	: x=ID 
-		{ 
-			$number = decVars.get($x.getText()); 
-		}
-	| x=NUM 
-		{ 
-			$number = Integer.parseInt($x.getText()); 
 		}
 	;
 
