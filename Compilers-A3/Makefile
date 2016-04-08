@@ -9,43 +9,43 @@ all:
 run:
 	java -cp $(CP) SimpleCompiler tests/declaration.txt > declaration.j
 	java -jar $(JASMIN) declaration.j
-	java declaration
+	java -cp . MyApp
 	read Declaration Test
 	java -cp $(CP) SimpleCompiler tests/print_one.txt > print_one.j
 	java -jar $(JASMIN) print_one.j
-	java print_one
+	java -cp . MyApp
 	read Print One Test
 	java -cp $(CP) SimpleCompiler tests/print_multi.txt > print_multi.j
 	java -jar $(JASMIN) print_multi.j
-	java print_multi
+	java -cp . MyApp
 	read Print Many Test
 	java -cp $(CP) SimpleCompiler tests/addition.txt > addition.j
 	java -jar $(JASMIN) addition.j
-	java addition
+	java -cp . MyApp
 	read Addition Test
 	java -cp $(CP) SimpleCompiler tests/subtraction.txt > subtraction.j
 	java -jar $(JASMIN) subtraction.j
-	java subtraction
+	java -cp . MyApp
 	read Subtraction Test
 	java -cp $(CP) SimpleCompiler tests/product.txt > product.j
 	java -jar $(JASMIN) product.j
-	java product
+	java -cp . MyApp
 	read Product Test
 	java -cp $(CP) SimpleCompiler tests/division.txt > division.j
 	java -jar $(JASMIN) division.j
-	java division
+	java -cp . MyApp
 	read Division Test
 	java -cp $(CP) SimpleCompiler tests/expression.txt > expression.j
 	java -jar $(JASMIN) expression.j
-	java expression
+	java -cp . MyApp
 	read Expression Test
 	java -cp $(CP) SimpleCompiler tests/repeat_one.txt > repeat_one.j
 	java -jar $(JASMIN) repeat_one.j
-	java repeat_one
+	java -cp . MyApp
 	read Repeat one statement Test
 	java -cp $(CP) SimpleCompiler tests/repeat_multi.txt > repeat_multi.j
 	java -jar $(JASMIN) repeat_multi.j
-	java repeat_multi
+	java -cp . MyApp
 	read Repeat many statements Test
 	
 
