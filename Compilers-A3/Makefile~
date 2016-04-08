@@ -1,4 +1,4 @@
-ANTLR = lib/antlr-4.4-complete.jar
+ANTLR = lib/antlr-4.5.2-complete.jar
 JASMIN = lib/jasmin.jar
 CP = $(ANTLR):$(JASMIN):.
 
